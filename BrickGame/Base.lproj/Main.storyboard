@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="landscape">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +13,68 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="BrickGame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dungeon" translatesAutoresizingMaskIntoConstraints="NO" id="zzf-J6-tGw">
+                                <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                            </imageView>
+                            <imageView autoresizesSubviews="NO" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icons8-pumpkin-96" translatesAutoresizingMaskIntoConstraints="NO" id="GbX-xz-tTN">
+                                <rect key="frame" x="303" y="28" width="60" height="60"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sword" translatesAutoresizingMaskIntoConstraints="NO" id="bvP-r1-CUA">
+                                <rect key="frame" x="303.5" y="290" width="60" height="5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="7Lw-Ob-sgT"/>
+                                    <constraint firstAttribute="height" constant="5" id="TVG-V0-2TQ"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score:100" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GfS-m7-PTM">
+                                <rect key="frame" x="578" y="20" width="69" height="19"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="17"/>
+                                <color key="textColor" red="0.96204930543899536" green="0.48539793491363525" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Game Over" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bLk-aU-bQI">
+                                <rect key="frame" x="247" y="166" width="173" height="43.5"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="40"/>
+                                <color key="textColor" red="0.9620493054" green="0.48539793489999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="zzf-J6-tGw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="3w4-n1-94m"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="zzf-J6-tGw" secondAttribute="trailing" id="3wa-BK-2NS"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="bvP-r1-CUA" secondAttribute="bottom" constant="80" id="4n0-Cb-dDx"/>
+                            <constraint firstItem="GfS-m7-PTM" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="543-ZX-OUy"/>
+                            <constraint firstItem="bLk-aU-bQI" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="VjF-4I-lcJ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="GfS-m7-PTM" secondAttribute="trailing" constant="20" id="ckY-4u-Ej8"/>
+                            <constraint firstItem="bLk-aU-bQI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="egR-e0-4qL"/>
+                            <constraint firstItem="bvP-r1-CUA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fW6-Vb-g0g"/>
+                            <constraint firstItem="zzf-J6-tGw" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="vJk-3b-IzF"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="zzf-J6-tGw" secondAttribute="bottom" id="xch-3U-nA7"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="ball" destination="GbX-xz-tTN" id="Tmt-Wp-usS"/>
+                        <outlet property="gameStatus" destination="bLk-aU-bQI" id="Sal-Zf-kbJ"/>
+                        <outlet property="scoreLbl" destination="GfS-m7-PTM" id="ve4-xf-S5O"/>
+                        <outlet property="sword" destination="bvP-r1-CUA" id="ZVh-LI-h5K"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="29.23538230884558" y="48.799999999999997"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="dungeon" width="1920" height="1080"/>
+        <image name="icons8-pumpkin-96" width="72" height="72"/>
+        <image name="sword" width="135" height="135"/>
+    </resources>
 </document>
